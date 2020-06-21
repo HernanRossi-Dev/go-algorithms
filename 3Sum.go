@@ -16,6 +16,9 @@ func threeSum(nums []int) [][]int {
 	// a + b + c = 0  or a + b = -c
 	for i := 0; i < length; i++ {
 		aNum := nums[i]
+		if aNum > 0 {
+			break
+		}
 		for j := i + 1; j < length; j++ {
 			bNum := nums[j]
 			cNum := (aNum + bNum)*(-1)
