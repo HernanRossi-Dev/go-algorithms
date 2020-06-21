@@ -2,6 +2,7 @@ package main
 import (
 	"strings"
 	"fmt"
+
 )
 
 func intToRoman(num int) string {
@@ -37,16 +38,16 @@ func intToRoman(num int) string {
 		return strings.Join(result[:], "")
 }
 
-type test struct {
+type testRomanNums struct {
 	input int
 	expected string
 }
 
-func main() {
-	tests := []test{}
-	testOne := test{input: 58, expected: "LVIII"  }
+func testRomanNumerals() {
+	tests := []testRomanNums{}
+	testOne := testRomanNums{input: 58, expected: "LVIII"  }
 	tests = append(tests, testOne)
-	testTwo := test{input: 1999, expected: "MCMXCIX"  } 
+	testTwo := testRomanNums{input: 1999, expected: "MCMXCIX"  } 
 	tests = append(tests, testTwo)
 
 	for _, test := range tests {

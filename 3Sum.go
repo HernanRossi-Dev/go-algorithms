@@ -2,6 +2,7 @@ package main
 import (
 	"sort"
 	"fmt"
+
 )
 
 func threeSum(nums []int) [][]int {
@@ -45,16 +46,16 @@ func threeSum(nums []int) [][]int {
   }
   return solutionSet
 }
-type test struct {
+type test3sum struct {
 	input []int
 	expected [][3]int
 }
 
-func main() {
-	tests := []test{}
-	testOne := test{input: []int{-1, 0, 1, 2, -1, -4}, expected: [][3]int{{-1, -1, 2}, {-1, 0, 1}}  }
+func test3Sum() {
+	tests := []test3sum{}
+	testOne := test3sum{input: []int{-1, 0, 1, 2, -1, -4}, expected: [][3]int{{-1, -1, 2}, {-1, 0, 1}}  }
 	tests = append(tests, testOne)
-	testTwo := test{input: []int{-2, 0, 0, 2, 2}, expected: [][3]int{{-2, 0, 2}} }
+	testTwo := test3sum{input: []int{-2, 0, 0, 2, 2}, expected: [][3]int{{-2, 0, 2}} }
 	tests = append(tests, testTwo)
 
 	for _, test := range tests {
