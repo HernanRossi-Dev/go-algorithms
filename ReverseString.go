@@ -1,15 +1,10 @@
-func reverseString(s []byte) []string {
-	result := recurse(0, s)
-	fmt.Print(arraySplit)
-	return arraySplit
-}
-
-func recurse(index int, str []byte) string {
-	if index >= len(str) {
-			result := ""
-			return result
+func reverseString(s []byte) {
+	length := len(s)
+	swapCount := length / 2
+	
+	for i := 0; i < swapCount; i++ {
+			temp := s[i]
+			s[i] = s[length - i -1]
+			s[length - 1 - i] = temp
 	}
-	result := recurse(index + 1, str)
-	result = result + string(str[index])
-	return result
 }
